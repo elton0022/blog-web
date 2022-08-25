@@ -5,8 +5,6 @@ import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { NameInputComponent } from './components/name-input/name-input.component';
 import { DescriptionTextareaComponent } from './components/description-textarea/description-textarea.component';
@@ -19,14 +17,11 @@ import { ListComponent } from './pages/list/list.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { NewButtonComponent } from './components/new-button/new-button.component';
 import { AlertTextComponent } from './components/alert-text/alert-text.component';
-import { NavfooterComponent } from './components/navfooter/navfooter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    NavbarComponent,
-    HeaderComponent,
     CardComponent,
     NameInputComponent,
     DescriptionTextareaComponent,
@@ -39,7 +34,6 @@ import { NavfooterComponent } from './components/navfooter/navfooter.component';
     ItemListComponent,
     NewButtonComponent,
     AlertTextComponent,
-    NavfooterComponent
   ],
   imports: [
     BrowserModule,

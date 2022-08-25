@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
+import { Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-dashboard',
@@ -14,18 +15,20 @@ export class DashboardComponent implements OnInit {
 
   posts: Post[];
 
-  constructor(private postService: PostService) { }
+  constructor(private postService: PostService, private titleService: Title) {
+    this.titleService.setTitle("BlogWeb | Dashboard");
+  }
 
   ngOnInit(): void {
     this.posts = this.postService.getAll();
   }
 
-  filterDateTime(){
-   this.posts = this.postService.filterForDateAndHour(this.dateTime);
+  filterDateTime() {
+    this.posts = this.postService.filterForDateAndHour(this.dateTime);
   }
 
-  filterCategory(category){
+  filterCategory(category) {
     this.posts = this.postService.filterForCategory(category);
-   }
+  }
 
 }
