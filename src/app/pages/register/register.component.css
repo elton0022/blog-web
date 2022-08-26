@@ -6,7 +6,7 @@
 .form-register {
     width: 100%;
     max-width: 500px;
-    margin-right: 100px;
+    margin-top: 40px;
     padding: 5px;
     display: flex;
     flex-direction: column;

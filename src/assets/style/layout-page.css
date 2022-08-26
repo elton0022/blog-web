@@ -11,3 +11,9 @@
     flex-direction: row;
     margin-bottom: 20px;
 }
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}

@@ -1,37 +1,55 @@
-.content-dashboard{
+.content-filters{
+    margin-top: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filters{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-button{
+ margin: 29px 0 0 50px;
+}
+
+.search-button{
+    margin-top: 29px;
 }
 
 .align-posts{
-    width: 80%;
     display: flex;
     align-items: center;
 }
 
 .posts{
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 400px);
     grid-gap: 15px;
-    padding: 15px;
 }
 
 .message{
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 50px;
 }
 
 .datatime{
     margin-right: 50px;
+    margin-top: 11px;
+}
+
+.category{
+    margin-right: 30px;
 }
 
 @media only screen and (max-width: 900px) {
     .posts{
         grid-template-columns: repeat(1, 400px) !important;
-    }
-
-    .content-dashboard{
-        display: flex;
-        flex-direction: column;
     }
 }

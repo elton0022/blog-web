@@ -17,6 +17,7 @@ import { ListComponent } from './pages/list/list.component';
 import { ItemListComponent } from './components/item-list/item-list.component';
 import { NewButtonComponent } from './components/new-button/new-button.component';
 import { AlertTextComponent } from './components/alert-text/alert-text.component';
+import { BgButtonComponent } from './components/bg-button/bg-button.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AlertTextComponent } from './components/alert-text/alert-text.component
     ItemListComponent,
     NewButtonComponent,
     AlertTextComponent,
+    BgButtonComponent,
   ],
   imports: [
     BrowserModule,

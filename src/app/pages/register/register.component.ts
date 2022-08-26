@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Title } from "@angular/platform-browser";
 import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
 
@@ -14,9 +15,10 @@ export class RegisterComponent implements OnInit {
   post: Post = new Post();
   isEdit: boolean = false;
 
-  constructor(private postService: PostService, public route: ActivatedRoute) { }
+  constructor(private titleService: Title, private postService: PostService, public route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle("BlogWeb | Novo");
     this.id = +this.route.snapshot.paramMap.get('id');
     if(this.id !== 0){
       this.isEdit = true;
@@ -30,7 +32,6 @@ export class RegisterComponent implements OnInit {
     }else{
       this.postService.savePost(this.post);
     }
-    console.log(this.post)
   }
 
 }

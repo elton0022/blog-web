@@ -1,7 +1,12 @@
-<h2>Dashboard</h2>
-<div class="content-dashboard">
-    <app-datatime-input class="datatime" [(dateTime)]="dateTime" (dateTimeChange)="filterDateTime()"></app-datatime-input>
-    <app-category-select [(categoryPost)]="category" (categoryPostChange)="filterCategory(category)" ></app-category-select>
+<div class="content-filters">
+    <app-bg-button class="register-button" color="var(--bg-green)" text="Novo +" routerLink="/register"></app-bg-button>
+    <div class="filters">
+        <app-datatime-input class="datatime" [(dateTime)]="dateTime" (dateTimeChange)="filterDateTime()">
+        </app-datatime-input>
+        <app-category-select class="category" [(categoryPost)]="category"
+            (categoryPostChange)="filterCategory(category)"></app-category-select>
+        <app-bg-button class="search-button" color="var(--bg-secondary)" text="Buscar"></app-bg-button>
+    </div>
 </div>
 <div class="message" *ngIf="posts.length == 0">
     <app-alert-text></app-alert-text>
