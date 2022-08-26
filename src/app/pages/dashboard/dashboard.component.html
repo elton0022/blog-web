@@ -1,5 +1,4 @@
 <div class="content-filters">
-    <app-bg-button class="register-button" color="var(--bg-green)" text="Novo +" routerLink="/register"></app-bg-button>
     <div class="filters">
         <app-datatime-input class="datatime" [(dateTime)]="dateTime" (dateTimeChange)="filterDateTime()">
         </app-datatime-input>
@@ -7,6 +6,7 @@
             (categoryPostChange)="filterCategory(category)"></app-category-select>
         <app-bg-button class="search-button" color="var(--bg-secondary)" text="Buscar"></app-bg-button>
     </div>
+    <app-bg-button class="register-button" color="var(--bg-green)" text="Novo" routerLink="/register"></app-bg-button>
 </div>
 <div class="message" *ngIf="posts.length == 0">
     <app-alert-text></app-alert-text>

@@ -1,13 +1,12 @@
 <div class="card">
-    <img src="../../../assets/images/card-background.jpg" class="image" alt="Avatar">
+    <img [src]="returnURL(postCard.category)" class="image" alt="Avatar">
     <div class="container">
-        <h4><b>{{postCard.name}}</b></h4>
-        <div class="details">
-            <label><strong>{{postCard.description}}</strong></label>
+        <div class="date">
             <label>{{dateFormat}} - {{hoursFormat}}</label>
         </div>
-        <p class="abstract">
-            {{postCard.abstract}}
+        <h4 class="title" >{{postCard.name}}</h4>
+        <p class="description">
+            {{postCard.description}}
         </p>
     </div>
 </div>

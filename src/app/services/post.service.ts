@@ -8,7 +8,14 @@ export class PostService {
 
   id = 1;
 
-  posts: Post[] = [];
+  posts: Post[] = [{
+    id: 0,
+    name: "Testess",
+    description: "Uma descricaaooo dsadsadsdsdsa asdasdsadsada asdasdadadsadasd asdsadsadasd asdasdsadasdasd asdasdasdasdsad",
+    abstract: "",
+    category: "Nenhuma",
+    dateAndHour: new Date(),
+}];
 
   constructor() { }
 
@@ -55,7 +62,7 @@ export class PostService {
     return this.posts.filter(post => post.category == category)
   }
 
-  private compareDates(dateTime: string, post: Post) {
+  private compareDates(dateTime: string, post: Post): boolean {
     let dateCurrentPost = dateTime.split('T')[0];
     let hoursCurrentPost = dateTime.split('T')[1];
 

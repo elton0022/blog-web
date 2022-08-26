@@ -16,7 +16,7 @@
 }
 
 .register-button{
- margin: 29px 0 0 50px;
+ margin: 29px 50px 0 0;
 }
 
 .search-button{
@@ -26,13 +26,14 @@
 .align-posts{
     display: flex;
     align-items: center;
+    margin: 51px;
 }
 
 .posts{
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-gap: 15px;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 35px;
 }
 
 .message{

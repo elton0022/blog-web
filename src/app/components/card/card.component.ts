@@ -17,7 +17,32 @@ export class CardComponent implements OnInit {
 
   ngOnInit(): void {
     this.dateFormat = this.postCard.dateAndHour.toLocaleDateString();
-    this.hoursFormat = this.postCard.dateAndHour.getHours()+":"+this.postCard.dateAndHour.getMinutes()
+    this.hoursFormat = this.postCard.dateAndHour.getHours() + ":" + this.postCard.dateAndHour.getMinutes()
+  }
+
+  returnURL(category: string) {
+
+    const defaultImg: string = "../../../assets/images/card-background.jpg";
+
+    switch (category) {
+      case "Nenhuma":
+        return defaultImg;
+
+      case "Esportes":
+        return "../../../assets/images/sports-background.jpg";
+
+      case "Filmes":
+        return "../../../assets/images/movies-background.jpg";
+
+      case "Festas":
+        return "../../../assets/images/parties-background.jpg";
+
+      case "Notícias":
+        return "../../../assets/images/news-background.jpg";
+
+      default:
+        return defaultImg;
+    }
   }
 
 }
