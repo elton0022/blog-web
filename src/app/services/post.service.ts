@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from "../models/Post";
+import { Category } from "../enum";
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +14,7 @@ export class PostService {
     name: "Testess",
     description: "Uma descricaaooo dsadsadsdsdsa asdasdsadsada asdasdadadsadasd asdsadsadasd asdasdsadasdasd asdasdasdasdsad",
     abstract: "",
-    category: "Nenhuma",
+    category: Category.FILMES,
     dateAndHour: new Date(),
 }];
 
@@ -21,6 +22,7 @@ export class PostService {
 
   savePost(post: Post) {
     post.id = this.id;
+    console.log(this.posts);
     this.posts.push(post);
     this.id = this.id + 1;
   }
@@ -55,8 +57,8 @@ export class PostService {
     return this.posts.filter(post => this.compareDates(dateTime, post))
   }
 
-  filterForCategory(category: string) {
-    if(category =="Nenhuma"){
+  filterForCategory(category: number) {
+    if(category == Category.NENHUMA){
       return this.posts  
     }
     return this.posts.filter(post => post.category == category)

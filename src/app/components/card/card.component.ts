@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Post } from "../../models/Post";
+import { Category } from "../../enum";
 
 @Component({
   selector: 'app-card',
@@ -20,25 +21,27 @@ export class CardComponent implements OnInit {
     this.hoursFormat = this.postCard.dateAndHour.getHours() + ":" + this.postCard.dateAndHour.getMinutes()
   }
 
-  returnURL(category: string) {
+  returnURL(category: number) {
 
-    const defaultImg: string = "../../../assets/images/card-background.jpg";
+    const dir: string = "../../../assets/images";
+
+    const defaultImg: string = `${dir}/card-background.jpg`;
 
     switch (category) {
-      case "Nenhuma":
+      case Category.NENHUMA:
         return defaultImg;
 
-      case "Esportes":
-        return "../../../assets/images/sports-background.jpg";
+      case Category.ESPORTES:
+        return `${dir}/sports-background.jpg`;
 
-      case "Filmes":
-        return "../../../assets/images/movies-background.jpg";
+      case Category.FILMES:
+        return `${dir}/movies-background.jpg`;
 
-      case "Festas":
-        return "../../../assets/images/parties-background.jpg";
+      case Category.FESTAS:
+        return `${dir}/parties-background.jpg`;
 
-      case "Notícias":
-        return "../../../assets/images/news-background.jpg";
+      case Category.NOTICIAS:
+        return `${dir}/news-background.jpg`;
 
       default:
         return defaultImg;

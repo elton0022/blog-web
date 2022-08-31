@@ -14,8 +14,7 @@ export class BgButtonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   onClick(){
     this.click.emit(true);

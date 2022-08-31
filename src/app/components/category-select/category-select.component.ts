@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { categories } from "../../constants/categories";
 
 @Component({
   selector: 'app-category-select',
@@ -8,14 +7,24 @@ import { categories } from "../../constants/categories";
 })
 export class CategorySelectComponent implements OnInit {
 
-  categories: string[] = categories;
+  @Input() categoryPost: number;
+  @Output() categoryPostChange = new EventEmitter<number>();
 
-  @Input() categoryPost: string;
-  @Output() categoryPostChange = new EventEmitter<string>();
+  categories = [
+    { value: 1, text: "Nenhuma" },
+    { value: 2, text: "Esportes" },
+    { value: 3, text: "Filmes" },
+    { value: 4, text: "Festas" },
+    { value: 5, text: "Notícias" }
+  ];
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onChange(){
+    this.categoryPostChange.emit(Number(this.categoryPost));
   }
 
 }

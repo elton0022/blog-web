@@ -1,8 +1,8 @@
 <div class="filter">
     <label for="label-select">Categoria</label>
     <div class="select">
-        <select id="category-select" [(ngModel)]="categoryPost" (ngModelChange)="categoryPostChange.emit(categoryPost)" >
-            <option *ngFor="let category of categories" selected [value]="category">{{category}}</option>
+        <select id="category-select" [(ngModel)]="categoryPost" (ngModelChange)="onChange()" >
+            <option *ngFor="let category of categories" selected [value]="category.value">{{category.text}}</option>
         </select>
     </div>
 </div>

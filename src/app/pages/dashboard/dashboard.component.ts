@@ -3,6 +3,7 @@ import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
 import { Title } from "@angular/platform-browser";
 import { Router } from '@angular/router';
+import { Category } from "../../enum";
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   dateTime: string;
-  category: string = "Nenhuma";
+  category: number = Category.NENHUMA;
 
   posts: Post[];
 
