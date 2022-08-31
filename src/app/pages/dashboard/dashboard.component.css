@@ -25,7 +25,9 @@
 
 .align-posts{
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin: 51px;
 }
 

@@ -10,6 +10,7 @@ export class BgButtonComponent implements OnInit {
   @Output() click = new EventEmitter<boolean>();
   @Input() color: string;
   @Input() text: string;
+  @Input() desabled: boolean;
 
   constructor() { }
 

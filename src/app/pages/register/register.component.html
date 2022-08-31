@@ -1,11 +1,22 @@
-<div class="content-form">
+<form class="content-form" (ngSubmit)="onSubmit()" #postForm="ngForm">
     <div class="form-register">
-        <app-name-input [(namePost)]="post.name"></app-name-input>
-        <app-description-textarea [(descriptionPost)]="post.description"></app-description-textarea>
-        <app-abstract-textarea [(abstractPost)]="post.abstract"></app-abstract-textarea>
+        <div class="form-group">
+            <label for="name-input">Nome</label>
+            <input id="name-input" [(ngModel)]="post.name" #name="ngModel" name="name" type="text" required />
+        </div>
+        <div class="form-group">
+            <label for="description-textarea">Descrição</label>
+            <textarea id="description-textarea" [(ngModel)]="post.description" #description="ngModel" name="description" type="text" rows="2" cols="60" required>
+            </textarea>
+        </div>
+        <div class="form-group">
+            <label for="abstract-textarea">Resumo</label>
+            <textarea id="abstract-textarea" [(ngModel)]="post.abstract" #abstract="ngModel" name="abstract" type="text" rows="4" cols="60" required>
+            </textarea>
+        </div>
         <app-category-select [(categoryPost)]="post.category"></app-category-select>
         <div class="footer">
-            <app-bg-button (click)="savePost()" color="var(--bg-green)" text="Salvar" routerLink="/"></app-bg-button>
+            <app-bg-button [(desabled)]="!postForm.form.valid" color="var(--bg-green)" text="Salvar" ></app-bg-button>
         </div>
     </div>
-</div>
+</form>

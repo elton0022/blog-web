@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {  Router } from '@angular/router';
 import { Title } from "@angular/platform-browser";
 import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
@@ -11,27 +11,17 @@ import { Post } from "../../models/Post";
 })
 export class RegisterComponent implements OnInit {
 
-  id: number;
-  post: Post = new Post();
-  isEdit: boolean = false;
+  post = new Post();
 
-  constructor(private titleService: Title, private postService: PostService, public route: ActivatedRoute) { }
+  constructor(private titleService: Title, private postService: PostService, private route: Router ) { };
 
   ngOnInit(): void {
     this.titleService.setTitle("BlogWeb | Novo");
-    this.id = +this.route.snapshot.paramMap.get('id');
-    if(this.id !== 0){
-      this.isEdit = true;
-      this.post = this.postService.getPost(this.id);
-    }
   }
 
-  savePost(){
-    if(this.isEdit){
-      this.postService.updatePost(this.id, this.post);
-    }else{
-      this.postService.savePost(this.post);
-    }
+  onSubmit(): void {
+    this.postService.savePost(this.post);
+    this.route.navigate(['/dashboard']);
   }
 
 }

@@ -6,7 +6,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./save-button.component.css']
 })
 export class SaveButtonComponent implements OnInit {
-  @Output() saveEvent = new EventEmitter<boolean>()
+
+  @Input() disabledButton: boolean;
+  @Output() disabledButtonChange = new EventEmitter<boolean>();
+  @Output() saveEvent = new EventEmitter<boolean>();
+
+  t = true;
 
   constructor() { }
 
