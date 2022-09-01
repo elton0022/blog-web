@@ -1,5 +1,5 @@
-<div class="card">
-    <img [src]="returnURL(postCard.category)" class="image" alt="Avatar">
+<div class="card" (click)="onClick()">
+    <img [src]="url(postCard.category)" class="image" alt="Avatar">
     <div class="container">
         <div class="date">
             <label>{{dateFormat}} - {{hoursFormat}}</label>

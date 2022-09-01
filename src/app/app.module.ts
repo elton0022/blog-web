@@ -11,6 +11,10 @@ import { CategorySelectComponent } from './components/category-select/category-s
 import { RegisterComponent } from './pages/register/register.component';
 import { AlertTextComponent } from './components/alert-text/alert-text.component';
 import { BgButtonComponent } from './components/bg-button/bg-button.component';
+import { FullPageComponent } from './pages/full-page/full-page.component';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
+
 
 @NgModule({
   declarations: [
@@ -22,13 +26,15 @@ import { BgButtonComponent } from './components/bg-button/bg-button.component';
     RegisterComponent,
     AlertTextComponent,
     BgButtonComponent,
+    FullPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     FontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

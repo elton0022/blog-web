@@ -11,11 +11,19 @@ export class PostService {
 
   posts: Post[] = [{
     id: 0,
-    name: "Testess",
+    name: "Testes sao muito importes poque testar que se esta tudo certinho entao?",
     description: "Uma descricaaooo dsadsadsdsdsa asdasdsadsada asdasdadadsadasd asdsadsadasd asdasdsadasdasd asdasdasdasdsad",
     abstract: "",
     category: Category.FILMES,
     dateAndHour: new Date(),
+},
+{
+  id: 1,
+  name: "Porque testar o som é importante muito importante para o show",
+  description: "Analisando os testes em uma festa de teste",
+  abstract: "<p>Assim que iniciamos nosso trabalho como desenvolvedor ou desenvolvedora, é comum pensarmos que quando criamos um software ele está finalizado assim que escrevemos a última linha de código. Neste momento não nos atentamos a uma etapa muito importante do processo de desenvolvimento, <strong>o teste</strong>. Em resumo, o teste é a etapa em que verificamos as falhas (os famosos bugs) que nossa aplicação pode ter.</p><p>Testes são tão importantes que temos um profissional especializado para essas situações. Aqui introduzimos um termo muito comum, o <strong>Quality Assurance (QA)</strong>. A tradução para ele seria algo como “garantia de qualidade” se referindo ao profissional ou área que irá garantir que um produto ou serviço está sendo oferecido da melhor forma o possível.</p><p>Definir testes em poucas linhas é complicado porque podemos abordar diversos tipos para diferentes aplicações; como mobile, frontend, backend, segurança dentre outras. <a href=\"https://www.alura.com.br/artigos/tipos-de-testes-principais-por-que-utiliza-los\">Neste artigo</a> você encontrará uma explicação ainda mais completa sobre as mais comuns.</p>",
+  category: 4,
+  dateAndHour: new Date(),
 }];
 
   constructor() { }

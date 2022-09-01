@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Post } from "../../models/Post";
-import { Category } from "../../enum";
+import { returnURL } from "../../utils/functions";  
 
 @Component({
   selector: 'app-card',
@@ -14,38 +15,20 @@ export class CardComponent implements OnInit {
   dateFormat: string;
   hoursFormat: string;
 
-  constructor() { }
+  constructor(private route: Router) { 
+  }
 
   ngOnInit(): void {
     this.dateFormat = this.postCard.dateAndHour.toLocaleDateString();
     this.hoursFormat = this.postCard.dateAndHour.getHours() + ":" + this.postCard.dateAndHour.getMinutes()
   }
 
-  returnURL(category: number) {
+  onClick(){
+    this.route.navigate([`/page/${this.postCard.id}`]);
+  }
 
-    const dir: string = "../../../assets/images";
-
-    const defaultImg: string = `${dir}/card-background.jpg`;
-
-    switch (category) {
-      case Category.NENHUMA:
-        return defaultImg;
-
-      case Category.ESPORTES:
-        return `${dir}/sports-background.jpg`;
-
-      case Category.FILMES:
-        return `${dir}/movies-background.jpg`;
-
-      case Category.FESTAS:
-        return `${dir}/parties-background.jpg`;
-
-      case Category.NOTICIAS:
-        return `${dir}/news-background.jpg`;
-
-      default:
-        return defaultImg;
-    }
+  url(category: number){
+    return returnURL(category);
   }
 
 }
