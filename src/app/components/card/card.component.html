@@ -1,13 +1,9 @@
-<div class="card">
-    <img src="../../../assets/images/card-background.jpg" class="image" alt="Avatar">
+<div class="card" (click)="onClick()">
+    <img [src]="url(postCard.category)" class="image" alt="Avatar">
     <div class="container">
-        <h4><b>{{postCard.name}}</b></h4>
-        <div class="details">
-            <label><strong>{{postCard.description}}</strong></label>
-            <label>{{dateFormat}} - {{hoursFormat}}</label>
+        <div class="date">
+            <label> <fa-icon [icon]="icons.faClock" size="lg"></fa-icon>&nbsp;- {{dateFormat}}</label>
         </div>
-        <p class="abstract">
-            {{postCard.abstract}}
-        </p>
+        <h4 class="title" >{{postCard.name}}</h4>
     </div>
 </div>

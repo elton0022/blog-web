@@ -1,8 +1,14 @@
 <div class="filter">
-    <label for="label-select">Categoria</label>
+    <label *ngIf="disableLabel" for="label-select">Categoria</label>
     <div class="select">
-        <select id="category-select" [(ngModel)]="categoryPost" (ngModelChange)="categoryPostChange.emit(categoryPost)" >
-            <option *ngFor="let category of categories" selected [value]="category">{{category}}</option>
+        <select id="category-select" [class]="isRegister() ? 'category-select-register' : '' " 
+        [style.color]="color" 
+        [style.border-radius]="borderRadius" 
+        [style.background-color]="backgroundColor" 
+        [style.border-color]="backgroundColor" 
+        [(ngModel)]="categoryPost" 
+        (ngModelChange)="onChange()" >
+            <option *ngFor="let category of categories" selected [value]="category.value" [disabled]="customTextDefault && category.value == 1">{{category.text}}</option>
         </select>
     </div>
 </div>

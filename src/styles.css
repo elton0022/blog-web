@@ -1,6 +1,6 @@
-:root{
+:root {
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Merriweather', sans-serif;
     --text-primary: #1c304e;
     --text-secondary: #ffff;
     --text-green: #02a775;
@@ -10,7 +10,8 @@
     --bg-green: #02a775;
 }
 
-html, body{
+html,
+body {
     margin: 0px;
     padding: 0px;
     color: black;
@@ -18,25 +19,57 @@ html, body{
 }
 
 
-body::-webkit-scrollbar{
-    width: 0.25rem;
+body::-webkit-scrollbar {
+    width: 8px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-green);
+    border-radius: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+h3 {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 15.4px;
+}
+
+p {
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+blockquote {
+    font-size: 21px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+pre {
+    font-size: 13px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
 }
 
 
-@media only screen and (max-width: 600px){
-    .home{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .home .content{
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    .home .content main{
-        width: 100%;
-        margin: 2px;
-        padding: 2px;
-    }
+.ck-editor__editable_inline {
+    min-height: 180px;
 }

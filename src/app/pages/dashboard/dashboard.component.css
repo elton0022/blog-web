@@ -1,37 +1,39 @@
-.content-dashboard{
+.content-posts{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
-.align-posts{
-    width: 80%;
-    display: flex;
-    align-items: center;
+.content-posts .margin-posts{
+    margin: 10px;
 }
 
 .posts{
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-gap: 15px;
-    padding: 15px;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 10px;
 }
 
 .message{
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 50px;
 }
 
-.datatime{
-    margin-right: 50px;
+@media only screen and (max-width: 1300px) {
+    .posts{
+        grid-template-columns: repeat(3, 300px) !important;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     .posts{
-        grid-template-columns: repeat(1, 400px) !important;
+        grid-template-columns: repeat(2, 300px) !important;
     }
+}
 
-    .content-dashboard{
-        display: flex;
-        flex-direction: column;
+@media only screen and (max-width: 650px) {
+    .posts{
+        grid-template-columns: repeat(1, 300px) !important;
     }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as Icons from "../../../assets/icons";
+import Icons from "../../../assets/icons";
 
 @Component({
   selector: 'app-alert-text',

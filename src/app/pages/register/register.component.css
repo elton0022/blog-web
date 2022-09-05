@@ -1,33 +1,53 @@
 .content-form {
     display: flex;
     justify-content: center;
+    padding: 30px;
 }
 
 .form-register {
     width: 100%;
-    max-width: 500px;
-    margin-right: 100px;
-    padding: 5px;
+    max-width: 700px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
-.form-register .header {
+.form-register #name-input {
     width: 100%;
-    text-align: center;
-    align-items: center;
+    height: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px #b4b3b3;
+}
+
+.form-register #description-textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px #b4b3b3;
+}
+
+.form-register #abstract-textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 1px;
+    font-size: 18px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px 1px #b4b3b3;
 }
 
 .form-register .footer {
-    margin-top: 15px;
     width: 100%;
+    margin-top: 15px;
 }
 
-@media only screen and (max-width: 600px) {
-    .form-register {
-        padding: 20px !important;
-        margin-right: 10px !important;
-        margin-bottom: 100px;
-    }
-}

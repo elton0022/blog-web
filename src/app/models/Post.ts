@@ -1,9 +1,11 @@
+import { Category } from "../enum";
+
 export class Post {
     id: number;
     name: string;
     description: string;
     abstract: string;
-    category: string;
+    category: Category;
     dateAndHour: Date;
 
     constructor() {
@@ -11,7 +13,7 @@ export class Post {
         this.name = "";
         this.description = "";
         this.abstract = "";
-        this.category = "Nenhuma";
+        this.category = Category.NENHUMA;
         this.dateAndHour = new Date();
     }
 }

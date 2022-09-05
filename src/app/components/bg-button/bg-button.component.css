@@ -1,0 +1,31 @@
+#bg-button {
+    width: 200px;
+    height: 35px;
+    border: 0px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+#bg-button:hover {
+    border-width: 2px;
+    background: var(--bg-green);
+}
+
+#bg-button:disabled {
+    background-color: #eee !important;
+    color: #aaa;
+    cursor: auto;
+}
+
+
+@media only screen and (max-width: 650px) {
+    #bg-button {
+        width: 80px;
+    }
+
+    .button-register {
+        width: 100% !important;
+    }
+}
+
