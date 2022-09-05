@@ -4,6 +4,7 @@ import { Title } from "@angular/platform-browser";
 import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
 import * as ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import Icons from "../../../assets/icons";
 
 @Component({
   selector: 'app-register',
@@ -14,6 +15,7 @@ export class RegisterComponent implements OnInit {
 
   post = new Post();
   public Editor = ClassicEditor;
+  icons = Icons;
 
   constructor(private titleService: Title, private postService: PostService, private route: Router ) { };
 
@@ -22,7 +24,6 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(): void {
-    console.log(this.post);
     this.postService.savePost(this.post);
     this.route.navigate(['/dashboard']);
   }

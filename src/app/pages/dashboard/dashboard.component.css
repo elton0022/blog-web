@@ -1,34 +1,12 @@
-.content-filters{
-    margin-top: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.filters{
-    width: 100%;
-    max-width: 700px;
+.content-posts{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.register-button{
- margin: 29px 50px 0 0;
-}
-
-.search-button{
-    margin-top: 29px;
-}
-
-.align-posts{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: 51px;
+.content-posts .margin-posts{
+    margin: 10px;
 }
 
 .posts{
@@ -42,17 +20,20 @@
     margin-top: 50px;
 }
 
-.datatime{
-    margin-right: 50px;
-    margin-top: 11px;
-}
-
-.category{
-    margin-right: 30px;
+@media only screen and (max-width: 1300px) {
+    .posts{
+        grid-template-columns: repeat(3, 300px) !important;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     .posts{
-        grid-template-columns: repeat(1, 400px) !important;
+        grid-template-columns: repeat(2, 300px) !important;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .posts{
+        grid-template-columns: repeat(1, 300px) !important;
     }
 }

@@ -20,7 +20,13 @@ body {
 
 
 body::-webkit-scrollbar {
-    width: 0.25rem;
+    width: 8px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--bg-green);
+    border-radius: 20px;
 }
 
 h1 {
@@ -64,6 +70,6 @@ pre {
 }
 
 
-.ck .ck-reset .ck-editor .ck-rounded-corners{
-    box-shadow: 0px 0px 0px 1px #b4b3b3 !important;
+.ck-editor__editable_inline {
+    min-height: 180px;
 }

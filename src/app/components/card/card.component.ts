@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Post } from "../../models/Post";
-import { returnURL } from "../../utils/functions";  
+import { returnURL } from "../../utils/functions";
+import Icons from "../../../assets/icons";
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-card',
@@ -10,17 +12,18 @@ import { returnURL } from "../../utils/functions";
 })
 export class CardComponent implements OnInit {
 
+  icons = Icons;
+
   @Input() postCard: Post;
 
   dateFormat: string;
-  hoursFormat: string;
 
   constructor(private route: Router) { 
   }
 
   ngOnInit(): void {
-    this.dateFormat = this.postCard.dateAndHour.toLocaleDateString();
-    this.hoursFormat = this.postCard.dateAndHour.getHours() + ":" + this.postCard.dateAndHour.getMinutes()
+    moment.locale('pt-br');
+    this.dateFormat = moment().format('MMMM d, YYYY');
   }
 
   onClick(){

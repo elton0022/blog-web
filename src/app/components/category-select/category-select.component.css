@@ -10,4 +10,24 @@
     cursor: pointer;
     background-color: #fff;
     box-shadow: 0px 0px 0px 1px #b4b3b3;
+    font-weight: bold;
+}
+
+#category-select option{
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 99;
+}
+
+@media only screen and (max-width: 650px) {
+    #category-select{
+        width: 80px;
+        font-size: 10px;
+    }
+
+    .category-select-register{
+        width: 100% !important;
+        max-width: 600px !important;
+    }
 }

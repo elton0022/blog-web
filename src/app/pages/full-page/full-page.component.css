@@ -17,7 +17,7 @@
     margin-top: -200px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 #00000033;
-    background-color: #fff;
+    background-color: white;
     width: 100%;
     max-width: 900px;
     height: auto;
@@ -36,10 +36,11 @@
 
 .content-page .card-header .title{
     font-size: 50px;
+    color: var(--text-primary);
 }
 
 .content-page .card-header .description{
-    color: #8a8989;
+    color: var(--bg-green);
     margin-top: -10px;
 }
 
@@ -47,5 +48,6 @@
     width: 100%;
     max-width: 900px;
     margin-top: 40px;
-    margin-bottom: 40px;;
+    margin-bottom: 40px;
+    color: var(--text-primary);
 }

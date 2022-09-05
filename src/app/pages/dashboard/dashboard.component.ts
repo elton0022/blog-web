@@ -3,7 +3,6 @@ import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
 import { Title } from "@angular/platform-browser";
 import { Router } from '@angular/router';
-import { Category } from "../../enum";
 
 @Component({
   selector: 'app-dashboard',
@@ -11,9 +10,6 @@ import { Category } from "../../enum";
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-
-  dateTime: string;
-  category: number = Category.NENHUMA;
 
   posts: Post[];
 
@@ -29,12 +25,12 @@ export class DashboardComponent implements OnInit {
     this.route.navigate(['/register']);
   }
 
-  filterDateTime() {
-    this.posts = this.postService.filterForDateAndHour(this.dateTime);
-  }
+  // filterDateTime() {
+  //   this.posts = this.postService.filterForDateAndHour(this.dateTime);
+  // }
 
-  filterCategory(category) {
-    this.posts = this.postService.filterForCategory(category);
-  }
+  // filterCategory(category) {
+  //   this.posts = this.postService.filterForCategory(category);
+  // }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-bg-button',
   templateUrl: './bg-button.component.html',
@@ -11,13 +11,18 @@ export class BgButtonComponent implements OnInit {
   @Input() color: string;
   @Input() text: string;
   @Input() desabled: boolean;
+  @Input() icon;
 
-  constructor() { }
+  constructor(private route: Router) { }
 
   ngOnInit(): void { }
 
-  onClick(){
+  onClick() {
     this.click.emit(true);
+  }
+
+  isRegister() {
+    return this.route.url === '/register';
   }
 
 }

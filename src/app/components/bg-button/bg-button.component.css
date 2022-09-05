@@ -1,4 +1,4 @@
-#bg-button{
+#bg-button {
     width: 200px;
     height: 35px;
     border: 0px;
@@ -7,7 +7,7 @@
     cursor: pointer;
 }
 
-#bg-button:hover{
+#bg-button:hover {
     border-width: 2px;
     background: var(--bg-green);
 }
@@ -17,3 +17,15 @@
     color: #aaa;
     cursor: auto;
 }
+
+
+@media only screen and (max-width: 650px) {
+    #bg-button {
+        width: 80px;
+    }
+
+    .button-register {
+        width: 100% !important;
+    }
+}
+

@@ -7,7 +7,7 @@ import { Category } from "../enum";
 })
 export class PostService {
 
-  id = 1;
+  id = 2;
 
   posts: Post[] = [{
     id: 0,
@@ -45,6 +45,7 @@ export class PostService {
   }
 
   getAll() {
+    console.log(this.posts);
     return this.posts;
   }
 

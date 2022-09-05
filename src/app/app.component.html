@@ -1,7 +1,22 @@
 <div class="home">
   <header class="header">
-    <fa-icon [icon]="icons.faBlog" size="lg"></fa-icon>
-    <strong>Blog Web</strong>
+    <div *ngIf="isNotDashboard()" class="back" (click)="backClicked()">
+      <fa-icon [icon]="icons.faArrowLeft" size="lg"></fa-icon> <strong>&nbsp;&nbsp;Voltar</strong>
+    </div>
+    <div *ngIf="!isNotDashboard()" class="search">
+      <app-category-select class="category" 
+      borderRadius="25px"
+      backgroundColor="var(--text-primary)"
+      color="var(--text-secondary)"
+      (disableLabel)="true" customTextDefault="Selecione uma assunto"
+        [(categoryPost)]="category" (categoryPostChange)="filterCategory(category)">
+      </app-category-select>
+    </div>
+    <div class="logo" (click)="goHome()">
+      <fa-icon [icon]="icons.faBlog" size="lg"></fa-icon>
+      <strong>Blog Web</strong>
+    </div>
+    <app-bg-button *ngIf="isNotRegister()" id="register-button" color="var(--bg-green)" text="Novo" routerLink="/register"></app-bg-button>
   </header>
   <div class="content">
     <main>
