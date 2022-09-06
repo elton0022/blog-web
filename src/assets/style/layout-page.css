@@ -21,4 +21,5 @@
 
 .form-group label{
     color: var(--text-primary);
+    font-size: 18px;
 }

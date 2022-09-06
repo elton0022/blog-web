@@ -1,5 +1,5 @@
-:root {
-    font-size: 18px;
+* {
+    font-size: 14px;
     font-family: 'Merriweather', sans-serif;
     --text-primary: #1c304e;
     --text-secondary: #ffff;

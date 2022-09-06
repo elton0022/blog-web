@@ -26,6 +26,7 @@ export class FullPageComponent implements OnInit {
     this.post = this.postService.getPost(this.id);
     moment.locale('pt-br');
     this.date = moment().format('MMMM d, YYYY');
+    window.scrollTo(0, 0);
   }
 
   url(){
