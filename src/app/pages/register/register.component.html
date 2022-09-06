@@ -13,8 +13,8 @@
             <label for="abstract-textarea">Resumo</label>
             <ckeditor id="abstract-textarea" [editor]="Editor" [(ngModel)]="post.abstract" #abstract="ngModel" name="abstract" required></ckeditor>
         </div>
-        <div class="form-group">
-            <app-category-select [(categoryPost)]="post.category"></app-category-select>
+        <div class="form-select">
+            <app-category-select class="category-select" [(categoryPost)]="post.category"></app-category-select>
         </div>
         <div class="footer">
             <app-bg-button [(desabled)]="!postForm.form.valid" [icon]="icons.faSdCard" color="var(--bg-green)" text="Salvar" ></app-bg-button>

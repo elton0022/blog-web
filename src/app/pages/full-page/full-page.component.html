@@ -1,10 +1,11 @@
 <div class="content-page">
     <img [src]="url()" alt="">
     <div class="card-header">
-        <span class="autor"> <fa-icon [icon]="icons.faClock" size="lg"></fa-icon>&nbsp;- {{date}}</span>
+        <span class="autor"> <fa-icon [icon]="icons.faClock" size="lg"></fa-icon>&nbsp; &nbsp;{{date}}</span>
         <h1 class="title">{{post.name}}</h1>
         <p class="description">{{post.description}}</p>
     </div>
-
-    <div [innerHTML]="post.abstract" class="abstract"></div>
+    <div class="content-abstract">
+        <div [innerHTML]="post.abstract" class="abstract"></div>
+    </div>
 </div>

@@ -16,6 +16,8 @@ body {
     padding: 0px;
     color: black;
     background-color: white;
+    outline: 0;
+    box-sizing: border-box;
 }
 
 
