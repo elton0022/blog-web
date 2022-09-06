@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { PostService } from "../../services/post.service";
 import { Post } from "../../models/Post";
 import { Title } from "@angular/platform-browser";
@@ -23,6 +23,10 @@ export class DashboardComponent implements OnInit {
 
   toRegister(){
     this.route.navigate(['/register']);
+  }
+
+  @HostListener('document:click', ['$event']) documentClickEvent($event: MouseEvent) {
+    console.log('Through HostListener - Click Event Details: ', $event)
   }
 
   // filterDateTime() {
