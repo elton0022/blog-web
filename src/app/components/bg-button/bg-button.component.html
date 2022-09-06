@@ -1,2 +1,4 @@
-<button id="bg-button" [class]="isRegister() ? 'button-register' : ''" [disabled]="desabled" [style.background-color]="color" (click)="onClick()"><fa-icon [icon]="icon" size="md"></fa-icon>&nbsp;&nbsp;{{text}}</button>
-
+<button id="bg-button" [class]="isRegister() ? 'button-register' : ''" [disabled]="desabled"
+    [style.background-color]="color" (click)="onClick()">
+    <fa-icon *ngIf="icon" class="fa-icon" [icon]="icon" size="md"></fa-icon>&nbsp;&nbsp;{{text}}
+</button>

@@ -51,3 +51,20 @@
     margin-top: 15px;
 }
 
+
+@media only screen and (max-width: 650px) {
+
+    .form-register #name-input{
+        padding: 0;
+        height: 35px;
+    }
+
+    .form-register #description-textarea{
+        padding: 0;
+    }
+
+    .form-register #abstract-textarea{
+        padding: 0;
+    }
+}
+

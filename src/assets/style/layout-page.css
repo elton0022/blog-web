@@ -15,9 +15,11 @@
 .form-group{
     display: flex;
     flex-direction: column;
+    width: 100%;
     margin-bottom: 10px;
 }
 
 .form-group label{
     color: var(--text-primary);
+    font-size: 18px;
 }

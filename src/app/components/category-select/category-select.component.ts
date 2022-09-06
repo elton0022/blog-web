@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter  } from '@angular/core';
 import { Router } from '@angular/router';
+import { Category } from "../../enum/index";
 
 @Component({
   selector: 'app-category-select',
@@ -17,11 +18,11 @@ export class CategorySelectComponent implements OnInit {
   @Output() categoryPostChange = new EventEmitter<number>();
 
   categories = [
-    { value: 1, text: "Nenhuma" },
-    { value: 2, text: "Esportes" },
-    { value: 3, text: "Filmes" },
-    { value: 4, text: "Festas" },
-    { value: 5, text: "Notícias" }
+    { value: Category.NENHUMA, text: "Nenhuma" },
+    { value: Category.ESPORTES, text: "Esportes" },
+    { value: Category.FILMES, text: "Filmes" },
+    { value: Category.FESTAS, text: "Festas" },
+    { value: Category.NOTICIAS, text: "Notícias" }
   ];
 
   constructor(private route: Router) { 

@@ -32,7 +32,11 @@
 
 .header .logo{
     cursor: pointer;
-    font-size: 18px;
+    font-size: 18px !important;
+}
+
+.header .logo strong{
+    font-size: 18px !important;
 }
 
 .header #register-button{

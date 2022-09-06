@@ -5,6 +5,7 @@
     border-radius: 25px;
     color: white;
     cursor: pointer;
+    font-size: 12px;
 }
 
 #bg-button:hover {
@@ -21,7 +22,9 @@
 
 @media only screen and (max-width: 650px) {
     #bg-button {
-        width: 80px;
+        width: 90px;
+        font-size: 10px;
+        height: 25px;
     }
 
     .button-register {

@@ -21,6 +21,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.titleService.setTitle("BlogWeb | Novo");
+    window.scrollTo(0, 0);
   }
 
   onSubmit(): void {

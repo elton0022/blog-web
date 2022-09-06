@@ -15,22 +15,25 @@ export class DashboardComponent implements OnInit {
 
   constructor(private postService: PostService, private titleService: Title, private route: Router) {
     this.titleService.setTitle("BlogWeb | Dashboard");
+    
+    document.addEventListener('getPosts', (e: any) => {
+      e.preventDefault();
+      this.posts = this.postService.filterForCategory(e.detail.value);
+    });
+
+    window.scrollTo(0, 0);
   }
 
   ngOnInit(): void {
     this.posts = this.postService.getAll();
   }
 
-  toRegister(){
+  toRegister() {
     this.route.navigate(['/register']);
   }
 
-  // filterDateTime() {
-  //   this.posts = this.postService.filterForDateAndHour(this.dateTime);
-  // }
-
-  // filterCategory(category) {
-  //   this.posts = this.postService.filterForCategory(category);
-  // }
+  filterCategory(category) {
+    this.posts = this.postService.filterForCategory(category);
+  }
 
 }

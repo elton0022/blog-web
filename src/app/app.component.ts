@@ -12,7 +12,7 @@ import { Category } from "./enum";
 export class AppComponent {
   icons = Icons
 
-  category: number = Category.NENHUMA;  
+  category: number = Category.NENHUMA;
 
   constructor(private location: Location, private router: Router) { }
 
@@ -28,7 +28,16 @@ export class AppComponent {
     return this.router.url !== "/register";
   }
 
-  goHome(){
-    this.router.navigate(["/"])
+  goHome() {
+    this.router.navigate(["/"]);
+  }
+
+  filterCategory(category: number) {
+    const eventArgs = {
+      detail: {
+        value: category
+      }
+    };
+    document.dispatchEvent(new CustomEvent('getPosts', eventArgs));
   }
 }
